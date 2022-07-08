@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: db/create-answer-and-question-schema.xml
+  - include:
+      file: db/insert-data-answer.xml
+  - include:
+      file: db/insert-data-question.xml
