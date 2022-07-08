@@ -31,6 +31,9 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
+        <addForeignKeyConstraint baseTableName="answers" baseColumnNames="question_id"
+                                 constraintName="question_fk"
+                                 referencedTableName="questions" referencedColumnNames="id"/>
 
     </changeSet>
 </databaseChangeLog>
