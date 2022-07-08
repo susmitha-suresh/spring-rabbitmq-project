@@ -6,7 +6,7 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet id="01" author="codingworld">
+    <changeSet id="01" author="susmitha">
         <createTable tableName="answers">
             <column name="id" type="int" autoIncrement="true">
                 <constraints nullable="false" unique="true" primaryKey="true"/>
@@ -14,7 +14,7 @@
             <column name="text" type="varchar(255)">
                 <constraints nullable="false" unique="true"/>
             </column>
-            <column name="question_id" type="int">
+            <column name="question" type="int">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -31,7 +31,7 @@
                 <constraints nullable="false"/>
             </column>
         </createTable>
-        <addForeignKeyConstraint baseTableName="answers" baseColumnNames="question_id"
+        <addForeignKeyConstraint baseTableName="answers" baseColumnNames="question"
                                  constraintName="question_fk"
                                  referencedTableName="questions" referencedColumnNames="id"/>
 
